@@ -47,7 +47,6 @@ public class Actv1 {
 	public static int[] returnReverse(int[] nums) {
 		int[] reverse = new int[nums.length];
 		for (int i=0; i<nums.length;i++) {
-			//run nums (parametrized arrays)
 				reverse[i] = nums[nums.length-1-i];
 		}
 		return reverse;
