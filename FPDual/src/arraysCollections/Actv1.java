@@ -8,14 +8,14 @@ public class Actv1 {
 		int[] tabla2 = { 1, 4, 6, 12 };
 		int[] tabla3 = { 1, 2, 3, 6 };
 
-		System.out.println("true, true, false\n" + Actv1.hay6(tabla1) + Actv1.hay6(tabla2) + Actv1.hay6(tabla3));
+		/**System.out.println("true, false, true\n" + Actv1.hay6(tabla1) + Actv1.hay6(tabla2) + Actv1.hay6(tabla3));
 
 		System.out.println("true, false" + Actv1.hay2o3(tabla3) + Actv1.hay2o3(tabla2));
 		System.out.println("[2, 3]\n");
 		for (int i = 0; i < 2; i++) {
 			System.out.println(Actv1.parejaCentral(tabla3)[i]);
-		}
-		for (int j = 0; j < 2; j++) {
+		}*/
+		for (int j = 0; j < tabla3.length; j++) {
 			System.out.println(returnReverse(tabla3)[j]);
 		}
 
@@ -46,10 +46,9 @@ public class Actv1 {
 	}
 	public static int[] returnReverse(int[] nums) {
 		int[] reverse = new int[nums.length];
-		for (int num : nums) {
-			for (int i = nums.length; i <reverse.length;i--) {
-				reverse[i] = nums[num];
-			}
+		for (int i=0; i<nums.length;i++) {
+			//run nums (parametrized arrays)
+				reverse[i] = nums[nums.length-1-i];
 		}
 		return reverse;
 	}
